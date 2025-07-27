@@ -1,0 +1,432 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables for Themes */
+:root {
+  /* Light Theme Colors */
+  --primary: 59 130 246;
+  --primary-foreground: 255 255 255;
+  --secondary: 16 185 129;
+  --secondary-foreground: 255 255 255;
+  --accent: 236 72 153;
+  --accent-foreground: 255 255 255;
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+  --card: 255 255 255;
+  --card-foreground: 15 23 42;
+  --border: 226 232 240;
+  --input: 226 232 240;
+  --ring: 59 130 246;
+  --success: 5 150 105;
+  --warning: 217 119 6;
+  --error: 220 38 38;
+  --muted: 248 250 252;
+  --muted-foreground: 100 116 139;
+}
+[data-theme="dark"] {
+  --primary: 96 165 250;
+  --primary-foreground: 15 23 42;
+  --secondary: 52 211 153;
+  --secondary-foreground: 15 23 42;
+  --accent: 244 114 182;
+  --accent-foreground: 15 23 42;
+  --background: 15 23 42;
+  --foreground: 241 245 249;
+  --card: 30 41 59;
+  --card-foreground: 241 245 249;
+  --border: 51 65 85;
+  --input: 51 65 85;
+  --ring: 96 165 250;
+  --success: 34 197 94;
+  --warning: 251 191 36;
+  --error: 248 113 113;
+  --muted: 30 41 59;
+  --muted-foreground: 148 163 184;
+}
+
+[data-theme="couple"] {
+  --primary: 236 72 153;
+  --primary-foreground: 255 255 255;
+  --secondary: 59 130 246;
+  --secondary-foreground: 255 255 255;
+  --accent: 245 158 11;
+  --accent-foreground: 255 255 255;
+  --background: 254 252 255;
+  --foreground: 31 41 55;
+  --card: 255 255 255;
+  --card-foreground: 31 41 55;
+  --border: 243 232 255;
+  --input: 243 232 255;
+  --ring: 236 72 153;
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --error: 239 68 68;
+  --muted: 249 250 251;
+  --muted-foreground: 107 114 128;
+}
+
+[data-theme="ocean"] {
+  --primary: 6 182 212;
+  --primary-foreground: 255 255 255;
+  --secondary: 14 165 233;
+  --secondary-foreground: 255 255 255;
+  --accent: 34 197 94;
+  --accent-foreground: 255 255 255;
+  --background: 240 249 255;
+  --foreground: 12 74 110;
+  --card: 255 255 255;
+  --card-foreground: 12 74 110;
+  --border: 186 230 253;
+  --input: 186 230 253;
+  --ring: 6 182 212;
+  --success: 34 197 94;
+  --warning: 251 191 36;
+  --error: 239 68 68;
+  --muted: 240 249 255;
+  --muted-foreground: 71 85 105;
+}
+
+[data-theme="forest"] {
+  --primary: 34 197 94;
+  --primary-foreground: 255 255 255;
+  --secondary: 101 163 13;
+  --secondary-foreground: 255 255 255;
+  --accent: 245 158 11;
+  --accent-foreground: 255 255 255;
+  --background: 240 253 244;
+  --foreground: 20 83 45;
+  --card: 255 255 255;
+  --card-foreground: 20 83 45;
+  --border: 187 247 208;
+  --input: 187 247 208;
+  --ring: 34 197 94;
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --error: 239 68 68;
+  --muted: 247 254 231;
+  --muted-foreground: 75 85 99;
+}
+
+[data-theme="sunset"] {
+  --primary: 251 146 60;
+  --primary-foreground: 255 255 255;
+  --secondary: 239 68 68;
+  --secondary-foreground: 255 255 255;
+  --accent: 236 72 153;
+  --accent-foreground: 255 255 255;
+  --background: 255 251 235;
+  --foreground: 154 52 18;
+  --card: 255 255 255;
+  --card-foreground: 154 52 18;
+  --border: 254 215 170;
+  --input: 254 215 170;
+  --ring: 251 146 60;
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --error: 239 68 68;
+  --muted: 255 247 237;
+  --muted-foreground: 120 113 108;
+}
+
+[data-theme="purple"] {
+  --primary: 147 51 234;
+  --primary-foreground: 255 255 255;
+  --secondary: 168 85 247;
+  --secondary-foreground: 255 255 255;
+  --accent: 236 72 153;
+  --accent-foreground: 255 255 255;
+  --background: 250 245 255;
+  --foreground: 88 28 135;
+  --card: 255 255 255;
+  --card-foreground: 88 28 135;
+  --border: 221 214 254;
+  --input: 221 214 254;
+  --ring: 147 51 234;
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --error: 239 68 68;
+  --muted: 245 243 255;
+  --muted-foreground: 107 114 128;
+}
+
+[data-theme="rose"] {
+  --primary: 244 63 94;
+  --primary-foreground: 255 255 255;
+  --secondary: 236 72 153;
+  --secondary-foreground: 255 255 255;
+  --accent: 251 146 60;
+  --accent-foreground: 255 255 255;
+  --background: 255 241 242;
+  --foreground: 136 19 55;
+  --card: 255 255 255;
+  --card-foreground: 136 19 55;
+  --border: 252 165 165;
+  --input: 252 165 165;
+  --ring: 244 63 94;
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --error: 239 68 68;
+  --muted: 254 242 242;
+  --muted-foreground: 107 114 128;
+}
+
+[data-theme="midnight"] {
+  --primary: 99 102 241;
+  --primary-foreground: 255 255 255;
+  --secondary: 139 92 246;
+  --secondary-foreground: 255 255 255;
+  --accent: 6 182 212;
+  --accent-foreground: 255 255 255;
+  --background: 15 23 42;
+  --foreground: 248 250 252;
+  --card: 30 41 59;
+  --card-foreground: 248 250 252;
+  --border: 51 65 85;
+  --input: 51 65 85;
+  --ring: 99 102 241;
+  --success: 34 197 94;
+  --warning: 251 191 36;
+  --error: 248 113 113;
+  --muted: 30 41 59;
+  --muted-foreground: 148 163 184;
+}
+/* Couple theme specific body styling */
+body.couple-theme {
+  background: linear-gradient(135deg, #FDF2F8 0%, #EFF6FF 100%) !important;
+  min-height: 100vh;
+}
+
+/* Ocean theme specific body styling */
+body.ocean-theme {
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%) !important;
+  min-height: 100vh;
+}
+
+/* Forest theme specific body styling */
+body.forest-theme {
+  background: linear-gradient(135deg, #F0FDF4 0%, #F7FEE7 100%) !important;
+  min-height: 100vh;
+}
+
+/* Sunset theme specific body styling */
+body.sunset-theme {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FFF7ED 100%) !important;
+  min-height: 100vh;
+}
+
+/* Purple theme specific body styling */
+body.purple-theme {
+  background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%) !important;
+  min-height: 100vh;
+}
+
+/* Rose theme specific body styling */
+body.rose-theme {
+  background: linear-gradient(135deg, #FFF1F2 0%, #FEF2F2 100%) !important;
+  min-height: 100vh;
+}
+
+/* Midnight theme specific body styling */
+body.midnight-theme {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important;
+  min-height: 100vh;
+}
+/* Utility classes using CSS variables */
+.bg-primary { background-color: rgb(var(--primary)); }
+.bg-secondary { background-color: rgb(var(--secondary)); }
+.bg-accent { background-color: rgb(var(--accent)); }
+.bg-background { background-color: rgb(var(--background)); }
+.bg-card { background-color: rgb(var(--card)); }
+.bg-muted { background-color: rgb(var(--muted)); }
+
+.text-primary { color: rgb(var(--primary)); }
+.text-secondary { color: rgb(var(--secondary)); }
+.text-accent { color: rgb(var(--accent)); }
+.text-foreground { color: rgb(var(--foreground)); }
+.text-card-foreground { color: rgb(var(--card-foreground)); }
+.text-muted-foreground { color: rgb(var(--muted-foreground)); }
+
+.border-primary { border-color: rgb(var(--primary)); }
+.border-secondary { border-color: rgb(var(--secondary)); }
+.border-accent { border-color: rgb(var(--accent)); }
+.border-border { border-color: rgb(var(--border)); }
+
+.ring-primary { --tw-ring-color: rgb(var(--primary)); }
+.ring-secondary { --tw-ring-color: rgb(var(--secondary)); }
+.ring-accent { --tw-ring-color: rgb(var(--accent)); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #64748B;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom theme-specific styles */
+[data-theme="couple"] .bg-primary {
+  background-color: var(--primary);
+}
+
+[data-theme="couple"] .text-primary {
+  color: var(--primary);
+}
+
+[data-theme="couple"] .border-primary {
+  border-color: var(--primary);
+}
+
+/* Couple theme gradients */
+[data-theme="couple"] .couple-gradient {
+  background: linear-gradient(135deg, #EC4899 0%, #3B82F6 100%);
+}
+
+/* Form input focus states for couple theme */
+[data-theme="couple"] input:focus,
+[data-theme="couple"] select:focus,
+[data-theme="couple"] textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+/* Button hover effects */
+.btn-hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading spinner */
+.spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid var(--primary);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Progress bars */
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+/* Responsive text */
+@screen sm {
+  .responsive-text {
+    font-size: 0.875rem;
+  }
+}
+
+@screen md {
+  .responsive-text {
+    font-size: 1rem;
+  }
+}
+
+@screen lg {
+  .responsive-text {
+    font-size: 1.125rem;
+  }
+}
+
+/* Custom shadows */
+.shadow-soft {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-medium {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-strong {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode shadows */
+[data-theme="dark"] .shadow-soft {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .shadow-medium {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .shadow-strong {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
