@@ -15,7 +15,7 @@ const defaultCategories: ExpenseCategory[] = [
 ];
 
 // API Configuration - Will be updated when backend is deployed
-const API_BASE_URL = 'http://localhost:5000'; // Local development
+const API_BASE_URL = 'https://family-finance-api.onrender.com'; // Local development
 // const API_BASE_URL = 'https://your-render-app.onrender.com'; // Production - update this later
 
 // API Helper functions
