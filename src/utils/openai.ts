@@ -19,8 +19,8 @@ interface AIAdvice {
 
 // Initialize OpenAI client
 const openai = new OpenAI({
-  apiKey: import.meta.env.OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true // Note: In production, use a backend service
+  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+  dangerouslyAllowBrowser: true // WARNING: don't do this in production
 });
 
 // Real OpenAI service for financial advice
