@@ -14,7 +14,8 @@ import Goals from './components/pages/Goals';
 import Tasks from './components/pages/Tasks';
 import Profile from './components/pages/Profile';
 import Insights from './components/pages/Insights';
-
+// ⛳️ Add this debug line here
+console.log('Loaded env variables:', import.meta.env);
 const AuthScreen: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);
 
